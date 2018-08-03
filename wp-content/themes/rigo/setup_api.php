@@ -9,6 +9,7 @@ $api = new \WPAS\Controller\WPASAPIController([
     'namespace' => 'Rigo\\Controller\\',
     'allow-origin' => '*',
     'allow-methods' => 'GET,POST,PUT'
+
 ]);
 
 
@@ -17,4 +18,5 @@ $api = new \WPAS\Controller\WPASAPIController([
 */
 $api->get([ 'path' => '/courses', 'controller' => 'SampleController:getDraftCourses' ]); 
 
-$api->get([ 'path' => '/photos', 'controller' => 'PhotosController:getPhotos' ]);
+$api->get([ 'path' => '/photo', 'controller' => 'PhotoController:getDraftPhoto' ]); 
+
