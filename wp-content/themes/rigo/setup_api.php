@@ -18,5 +18,14 @@ $api = new \WPAS\Controller\WPASAPIController([
 */
 $api->get([ 'path' => '/courses', 'controller' => 'SampleController:getDraftCourses' ]); 
 
-$api->get([ 'path' => '/photo', 'controller' => 'PhotoController:getDraftPhoto' ]); 
+$api->get([ 'path' => '/photo', 'controller' => 'PhotoController:getDraftPhoto', 'capability'=>'activate_plugins']); 
 
+$api->get([ 'path' => '/product', 'controller' => 'ProductController:getAllProducts']);
+
+/*$api->get([ 'path' => '/product/(?P<id>[\d]+)', 'controller' => 'ProductController:getSoloProduct']);
+
+$api->put([ 'path' => '/customer', 'controller' => 'CustomerController: createNewCustomer']);
+
+$api->put([ 'path' => '/checkout', 'controller' => 'CheckoutController: process_Order']);
+
+$api->put([ 'path' => '/order', 'controller' => 'OrderController: createOrder']);*/
